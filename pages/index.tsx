@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          hello new site! new branch is made now
+          hello new site! so good start now
         </h1>
 
       </main>
