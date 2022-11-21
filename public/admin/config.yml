@@ -1,22 +1,76 @@
 backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
+
 media_folder: public/img
 public_folder: img
+
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: "projects"
+    label: "Projects"
+    folder: "src/pages/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+
+  - name: "content"
+    label: "Content"
     files:
-    - label: "Home"
-      name: "home"
-      file: "content/home.md"
-      fields:
-        - { label: "Title", name: "title", widget: "string"}
-        - { label: "Publish Date", name: "date", widget: "datetime" }
-        - { label: "Body", name: "body", widget: "markdown"}
-        - label: 'Cats'
-          name: "cats"
-          widget: list
-          fields:
-            - { label: "Name", name: "name", widget: "string"}
-            - { label: "Description", name: "description", widget: "text"}
+      - file: "src/pages/impressum/impressum.json"
+        name: impressum
+        label: "Impressum"
+        fields:
+          - name: categories
+            label: "Imprint Categories"
+            widget: list
+            allow_add: true
+            fields:
+              - name: title
+                label: "Title"
+                widget: string
+                required: false
+              - name: content_de
+                label: "Text"
+                widget: text
+          - name: contact
+            label: "Kontakt"
+            widget: text
+          - name: press
+            label: "Presse"
+            widget: text
+
+            # entweder so oder via artists projekte hinzufügen
+      - file: "src/pages/partners/partners.json"
+        name: partners
+        label: "Partners"
+        fields:
+          - name: partners
+            label: "Partners"
+            widget: list
+            allow_add: true
+            fields:
+              - name: title
+                label: "Title"
+                widget: string
+              - name: link
+                label: "Web Link"
+                widget: string
+              - name: image
+                label: "Logo Image"
+                widget: image
+#       - file: "src/pages/timetable/timetable.json"
+#         name: timetable
+#         label: "Timetable"
+#         fields:
+#           - name: events
+#             widget: list
+#             allow_add: true
+#             fields:
+#               - name: artist
+#                 required: false
+#                 label: "Artist"
+#                 widget: relation
+#                 collection: "artists"
+#                 value_field: title
+#                 search_fields: [title]
