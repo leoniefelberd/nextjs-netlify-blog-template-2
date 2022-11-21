@@ -16,6 +16,7 @@ export default function Home() {
           hello new site! new branch is made now
           if i change here now deploy-now
           and if i comit without full request
+          imme rnoch deploy now branch aber auf main umgestellt im netlify drin
         </h1>
 
       </main>
