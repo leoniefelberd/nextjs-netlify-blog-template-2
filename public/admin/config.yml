@@ -6,71 +6,107 @@ media_folder: public/img
 public_folder: img
 
 collections:
-  - name: "projects"
-    label: "Projects"
-    folder: "src/pages/projects"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-
+  # - name: "projects"
+  #   label: "Projects"
+  #   folder: "src/pages/projects"
+  #   create: true
+  #   slug: "{{slug}}"
+  #   fields:
+  #     - { label: "Title", name: "title", widget: "string" }
+  #     - { label: "Category", name: "category", widget: "select", multiple: true, options: ["Auftragsarbeit", "Freie Arbeiten", "Vermittlung"] }
+  #     - { label: "Thumbnail", name: "thumbnail", widget: image }
+  #     - { label: "Details", name: "details", widget: "text" }
+  #     - { label: "Description", name: "description", widget: "text" }
   - name: "content"
     label: "Content"
     files:
-      - file: "src/pages/impressum/impressum.json"
-        name: impressum
-        label: "Impressum"
+      - file: "src/pages/info/info.json"
+        name: info
+        label: "Info"
         fields:
-          - name: categories
-            label: "Imprint Categories"
+          - name: title
+            label: "Title"
+            widget: text
+          - name: mail
+            label: "Mail"
+            widget: string
+          - name: phonenumber
+            label: "Telefonnummer"
+            widget: string
+          - name: location
+            label: "Location"
+            widget: string
+          - name: infoblocks
+            label: "Infoblocks Text"
             widget: list
             allow_add: true
             fields:
-              - name: title
-                label: "Title"
+              - name: subtitle
+                label: "Subtitle"
                 widget: string
                 required: false
-              - name: content_de
+              - name: text
                 label: "Text"
                 widget: text
-          - name: contact
-            label: "Kontakt"
-            widget: text
-          - name: press
-            label: "Presse"
-            widget: text
-
-            # entweder so oder via artists projekte hinzufügen
-      - file: "src/pages/partners/partners.json"
-        name: partners
-        label: "Partners"
+                required: false
+      - file: "src/pages/projekt/projekt.json"
+        name: projekt
+        label: "Projekt"
         fields:
-          - name: partners
-            label: "Partners"
+          - name: projekt
+            label: "Projekt"
             widget: list
             allow_add: true
             fields:
               - name: title
                 label: "Title"
                 widget: string
-              - name: link
-                label: "Web Link"
-                widget: string
-              - name: image
-                label: "Logo Image"
+              - name: "kategorie"
+                label: "Kategorie"
+                widget: "select"
+                multiple: true
+                options: ["Auftragsarbeit", "Freie Arbeiten", "Vermittlung"]
+              - name: thumbnail
+                label: "Thumbnail"
                 widget: image
-#       - file: "src/pages/timetable/timetable.json"
-#         name: timetable
-#         label: "Timetable"
-#         fields:
-#           - name: events
-#             widget: list
-#             allow_add: true
-#             fields:
-#               - name: artist
-#                 required: false
-#                 label: "Artist"
-#                 widget: relation
-#                 collection: "artists"
-#                 value_field: title
-#                 search_fields: [title]
+              - name: angaben
+                label: "Angaben"
+                widget: text
+              - name: text
+                label: "Text"
+                widget: text
+              - name: projektinhalt
+                label: "Projektinhalt"
+                widget: list
+                allow_add: true
+                required: false
+                fields:
+                  - name: image
+                    label: "Image oder GIF"
+                    widget: image
+                  - name: vimeolink
+                    label: "Vimeolink"
+                    widget: string
+      - file: "src/pages/fakeprojekt/fakeprojekt.json"
+        name: fakeprojekt
+        label: "Fakeprojekt"
+        fields:
+          - name: fakeprojekt
+            label: "Fakeprojekt"
+            widget: list
+            allow_add: true
+            fields:
+              - name: title
+                label: "Title"
+                widget: string
+              - name: "kategorie"
+                label: "Kategorie"
+                widget: "select"
+                multiple: true
+                options: ["Auftragsarbeit", "Freie Arbeiten", "Vermittlung"]
+              - name: thumbnail
+                label: "Thumbnail"
+                widget: image
+              - name: drehbild
+                label: "Drehbild"
+                widget: image
