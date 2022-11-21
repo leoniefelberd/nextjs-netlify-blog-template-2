@@ -26,7 +26,7 @@ collections:
         fields:
           - name: title
             label: "Title"
-            widget: text
+            widget: string
           - name: mail
             label: "Mail"
             widget: string
@@ -75,8 +75,8 @@ collections:
               - name: text
                 label: "Text"
                 widget: text
-              - name: projektinhalt
-                label: "Projektinhalt"
+              - name: projektinhaltimage
+                label: "Projektinhalt Image"
                 widget: list
                 allow_add: true
                 required: false
@@ -84,6 +84,12 @@ collections:
                   - name: image
                     label: "Image oder GIF"
                     widget: image
+              - name: projektinhaltvideo
+                label: "Projektinhalt Video"
+                widget: list
+                allow_add: true
+                required: false
+                fields:
                   - name: vimeolink
                     label: "Vimeolink"
                     widget: string
