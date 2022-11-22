@@ -85,10 +85,12 @@ collections:
                     label: "Image oder GIF"
                     widget: image
                     required: false
+                    allow_add: true
                   - name: vimeolink
                     label: "Vimeolink"
                     widget: string
                     required: false
+                    allow_add: true
       - file: "src/pages/fakeprojekt/fakeprojekt.json"
         name: fakeprojekt
         label: "Fakeprojekt"
