@@ -20,7 +20,7 @@ collections:
   - name: "content"
     label: "Content"
     files:
-      - file: "src/pages/info/info.json"
+      - file: "pages/info/info.json"
         name: info
         label: "Info"
         fields:
@@ -49,7 +49,7 @@ collections:
                 label: "Text"
                 widget: text
                 required: false
-      - file: "src/pages/projekt/projekt.json"
+      - file: "pages/projekt/projekt.json"
         name: projekt
         label: "Projekt"
         fields:
@@ -91,7 +91,7 @@ collections:
                     widget: string
                     required: false
                     allow_add: true
-      - file: "src/pages/fakeprojekt/fakeprojekt.json"
+      - file: "pages/fakeprojekt/fakeprojekt.json"
         name: fakeprojekt
         label: "Fakeprojekt"
         fields:
