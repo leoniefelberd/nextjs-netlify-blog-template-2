@@ -17,6 +17,7 @@ collections:
       - { label: "Thumbnail", name: "thumbnail", widget: image }
       - { label: "Details", name: "details", widget: "text" }
       - { label: "Description", name: "description", widget: "text" }
+      - { label: "Image oben", name: "image", widget: image }
       - name: links
         label: "Links"
         widget: list
@@ -27,21 +28,20 @@ collections:
           label: URL
           widget: string
           required: false
-          hint: "Entweder Bild oder "
+          hint: "Entweder Bild oder url"
         - name: image
           label: Image
           widget: image
           required: false
-      - label: "Featured Image"
-        name: "thumbnail"
-        widget: "image"
-        choose_url: true
-        default: "/uploads/chocolate-dogecoin.jpg"
-        media_library:
-          config:
-            multiple: true
-      - {label: "Draft", name: "draft", widget: "boolean", default: true}
-
+      # - label: "Featured Image"
+      #   name: "thumbnail-image"
+      #   widget: "image"
+      #   choose_url: true
+      #   default: "/uploads/chocolate-dogecoin.jpg"
+      #   media_library:
+      #     config:
+      #       multiple: true
+      # - {label: "Draft", name: "draft", widget: "boolean", default: true}
   # - name: "artists"
   #   label: "Artists"
   #   folder: "src/pages/artists"
@@ -55,16 +55,6 @@ collections:
   #     - { label: "Description (DE)", name: "description_de", widget: "text" }
   #     - { label: "Description (EN)", name: "description_en", widget: "text" }
   #     - { label: "Image", name: "image", widget: image }
-  #     - name: "origin"
-  #       label: "Origin"
-  #       widget: text
-  #       required: false
-  #     - name: audioPreview
-  #       label: "Audio Preview"
-  #       widget: file
-  #       allow_multiple: false
-  #       required: false
-  #       hint: "MP3 Datei"
   #     - name: links
   #       label: "Links"
   #       widget: list
@@ -78,18 +68,6 @@ collections:
   #         - name: url
   #           label: URL
   #           widget: string
-  #     - name: layoutHighlight
-  #       label: "Layout Highlight"
-  #       hint: "Roter Buchstabe in der Übersicht"
-  #       required: false
-  #       widget: boolean
-  #       default: false
-  #     - name: hideDate
-  #       label: "Hide Date"
-  #       hint: "Datum wird auf der Seite versteckt (aber verwendet für Reihenfolge)"
-  #       required: false
-  #       widget: boolean
-  #       default: false
 
   - name: "content"
     label: "Content"
