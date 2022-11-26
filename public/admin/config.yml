@@ -6,33 +6,33 @@ media_folder: public/img
 public_folder: img
 
 collections:
-  - name: "projects"
-    label: "Projects"
-    folder: "src/pages/projects"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Category", name: "category", widget: "select", multiple: true, options: ["Auftragsarbeit", "Freie Arbeiten", "Vermittlung"] }
-      - { label: "Thumbnail", name: "thumbnail", widget: image }
-      - { label: "Details", name: "details", widget: "text" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Image oben", name: "image", widget: image }
-      - name: links
-        label: "Links"
-        widget: list
-        allow_add: true
-        required: false
-        fields:
-        - name: url
-          label: URL
-          widget: string
-          required: false
-          hint: "Entweder Bild oder url"
-        - name: image
-          label: Image
-          widget: image
-          required: false
+  # - name: "projects"
+  #   label: "Projects"
+  #   folder: "src/pages/projects"
+  #   create: true
+  #   slug: "{{slug}}"
+  #   fields:
+  #     - { label: "Title", name: "title", widget: "string" }
+  #     - { label: "Category", name: "category", widget: "select", multiple: true, options: ["Auftragsarbeit", "Freie Arbeiten", "Vermittlung"] }
+  #     - { label: "Thumbnail", name: "thumbnail", widget: image }
+  #     - { label: "Details", name: "details", widget: "text" }
+  #     - { label: "Description", name: "description", widget: "text" }
+  #     - { label: "Image oben", name: "image", widget: image }
+  #     - name: links
+  #       label: "Links"
+  #       widget: list
+  #       allow_add: true
+  #       required: false
+  #       fields:
+  #       - name: url
+  #         label: URL
+  #         widget: string
+  #         required: false
+  #         hint: "Entweder Bild oder url"
+  #       - name: image
+  #         label: Image
+  #         widget: image
+  #         required: false
       # - label: "Featured Image"
       #   name: "thumbnail-image"
       #   widget: "image"
