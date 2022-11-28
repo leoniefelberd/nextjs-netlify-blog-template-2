@@ -68,7 +68,6 @@ collections:
   #         - name: url
   #           label: URL
   #           widget: string
-
   - name: "content"
     label: "Content"
     files:
@@ -127,22 +126,22 @@ collections:
               - name: text
                 label: "Text"
                 widget: text
-              - name: projektinhalt
-                label: "Projektinhalt"
-                widget: list
-                allow_add: true
-                required: false
-                fields:
-                  - name: image
-                    label: "Image oder GIF"
-                    widget: image
-                    required: false
-                    allow_add: true
-                  - name: vimeolink
-                    label: "Vimeolink"
-                    widget: string
-                    required: false
-                    allow_add: true
+              # - name: projektinhalt
+              #   label: "Projektinhalt"
+              #   widget: list
+              #   allow_add: true
+              #   required: false
+              #   fields:
+              #     - name: image
+              #       label: "Image oder GIF"
+              #       widget: image
+              #       required: false
+              #       allow_add: true
+              #     - name: vimeolink
+              #       label: "Vimeolink"
+              #       widget: string
+              #       required: false
+              #       allow_add: true
       - file: "pages/fakeprojekt/fakeprojekt.json"
         name: fakeprojekt
         label: "Fakeprojekt"
