@@ -78,19 +78,6 @@ collections:
   #         - name: url
   #           label: URL
   #           widget: string
-  #     - name: layoutHighlight
-  #       label: "Layout Highlight"
-  #       hint: "Roter Buchstabe in der Übersicht"
-  #       required: false
-  #       widget: boolean
-  #       default: false
-  #     - name: hideDate
-  #       label: "Hide Date"
-  #       hint: "Datum wird auf der Seite versteckt (aber verwendet für Reihenfolge)"
-  #       required: false
-  #       widget: boolean
-  #       default: false
-
   - name: "content"
     label: "Content"
     files:
