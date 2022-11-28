@@ -9,6 +9,7 @@ collections:
   # - name: "projects"
   #   label: "Projects"
   #   folder: "src/pages/projects"
+<<<<<<< HEAD
   #   create: true
   #   slug: "{{slug}}"
   #   fields:
@@ -45,11 +46,13 @@ collections:
   # - name: "artists"
   #   label: "Artists"
   #   folder: "src/pages/artists"
+=======
+>>>>>>> parent of 540d72b (backend image + project)
   #   create: true
   #   slug: "{{slug}}"
   #   fields:
-  #     - { label: "Template Key", name: "templateKey", widget: "hidden", default: "artist-page" }
   #     - { label: "Title", name: "title", widget: "string" }
+<<<<<<< HEAD
   #     - { label: "Date", name: "date", widget: "datetime" }
   #     - { label: "Location", name: "location", widget: "text" }
   #     - { label: "Description (DE)", name: "description_de", widget: "text" }
@@ -68,6 +71,12 @@ collections:
   #         - name: url
   #           label: URL
   #           widget: string
+=======
+  #     - { label: "Category", name: "category", widget: "select", multiple: true, options: ["Auftragsarbeit", "Freie Arbeiten", "Vermittlung"] }
+  #     - { label: "Thumbnail", name: "thumbnail", widget: image }
+  #     - { label: "Details", name: "details", widget: "text" }
+  #     - { label: "Description", name: "description", widget: "text" }
+>>>>>>> parent of 540d72b (backend image + project)
   - name: "content"
     label: "Content"
     files:
